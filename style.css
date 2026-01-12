@@ -253,4 +253,40 @@ body {
   .contact {
     padding: 60px 8%;
   }
+/* =========================
+   MOBILE NAV BUTTONS
+========================= */
+.mobile-nav {
+  display: none;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.mobile-btn {
+  background: transparent;
+  border: 2px solid #c9a24d;
+  color: #c9a24d;
+  padding: 12px 28px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.mobile-btn:hover {
+  background: #c9a24d;
+  color: #000;
+}
+
+/* SHOW ONLY ON MOBILE */
+@media (max-width: 768px) {
+  .arrow {
+    display: none; /* hide side arrows */
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+}
+
 }
