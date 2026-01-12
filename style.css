@@ -1,3 +1,9 @@
+
+
+.outfit-grid,
+.outfit-grid * {
+  transform: none !important;
+}
 /* =========================
    RESET
 ========================= */
