@@ -1,4 +1,4 @@
-let outfits = document.querySelectorAll(".outfit");
+const outfits = document.querySelectorAll(".outfit");
 let currentIndex = 0;
 let autoSlide;
 let isHovered = false;
@@ -8,8 +8,8 @@ const isMobile = window.innerWidth <= 768;
 
 // SLIDE SPEED
 // Desktop: 4 sec
-// Mobile: 12 sec (between 10–15 as you asked)
-const SLIDE_SPEED = isMobile ? 12000 : 4000;
+// Mobile: NO AUTO SCROLL
+const SLIDE_SPEED = 4000;
 
 /* =========================
    SHOW OUTFIT
@@ -35,24 +35,31 @@ function prevOutfit() {
 }
 
 /* =========================
-   ARROWS
+   DESKTOP ARROWS
 ========================= */
-document.querySelector(".arrow.next").addEventListener("click", () => {
+document.querySelector(".arrow.next")?.addEventListener("click", () => {
   stopAutoSlide();
   nextOutfit();
   startAutoSlide();
 });
 
-document.querySelector(".arrow.prev").addEventListener("click", () => {
+document.querySelector(".arrow.prev")?.addEventListener("click", () => {
   stopAutoSlide();
   prevOutfit();
   startAutoSlide();
 });
 
 /* =========================
-   AUTO SLIDE
+   MOBILE BUTTONS (BOTTOM)
+========================= */
+document.querySelector(".mobile-btn.next")?.addEventListener("click", nextOutfit);
+document.querySelector(".mobile-btn.prev")?.addEventListener("click", prevOutfit);
+
+/* =========================
+   AUTO SLIDE (DESKTOP ONLY)
 ========================= */
 function startAutoSlide() {
+  if (isMobile) return; // ❌ NO AUTO SCROLL ON MOBILE
   autoSlide = setInterval(nextOutfit, SLIDE_SPEED);
 }
 
