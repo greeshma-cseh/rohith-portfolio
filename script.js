@@ -9,7 +9,7 @@ const isMobile = window.innerWidth <= 768;
 // SLIDE SPEED
 // Desktop: 4 sec
 // Mobile: 12 sec (between 10–15 as you asked)
-const SLIDE_SPEED = isMobile ? 10000 : 4000;
+const SLIDE_SPEED = isMobile ? 12000 : 4000;
 
 /* =========================
    SHOW OUTFIT
