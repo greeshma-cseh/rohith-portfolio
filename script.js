@@ -9,7 +9,7 @@ const isMobile = window.innerWidth <= 768;
 // SLIDE SPEED
 // Desktop: 4 sec
 // Mobile: NO AUTO SCROLL
-const SLIDE_SPEED = 4000;
+const SLIDE_SPEED = 6000;
 
 /* =========================
    SHOW OUTFIT
